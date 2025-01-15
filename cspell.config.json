@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/refs/tags/v8.17.1/cspell.schema.json",
+	"name": "@sepruko/github-profile",
+	"version": "0.2",
+	"description": "CSpell configuration for the github:sepruko/.github repository.",
+	"cache": {
+		"cacheLocation": "node_modules/.cache/cspell/cache.json",
+		"useCache": true
+	},
+	"dictionaries": [
+		"dotgithub",
+		"dotgithub-dependencies"
+	],
+	"dictionaryDefinitions": [
+		{
+			"name": "dotgithub",
+			"description": "Words, terms & phrases used by the github:sepruko/.github repository.",
+			"type": "W",
+			"path": "dict/dotgithub.txt",
+			"useCompounds": true
+		},
+		{
+			"name": "dotgithub-dependencies",
+			"description": "Words, terms, names & phrases used by dependencies of the github:sepruko/.github repository.",
+			"type": "W",
+			"path": "dict/dotgithub-dependencies.txt",
+			"useCompounds": true
+		}
+	],
+	"ignorePaths": [
+		"dict/**.txt"
+	],
+	"import": [
+		"@sepruko/config/cspell"
+	],
+	"reporters": [
+		"default",
+		[
+			"@cspell/cspell-json-reporter",
+			{
+				"outFile": "node_modules/.cache/cspell/report.json"
+			}
+		]
+	]
+}

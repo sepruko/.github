@@ -1,0 +1,9 @@
+# services
+JSR						jsr
+
+# standards
+ANSI					ansi
+
+# vscode extensions
+DBAEUMER	DBaeumer	dbaeumer
+UNIFIEDJS	UnifiedJS	unifiedjs
