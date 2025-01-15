@@ -1,0 +1,58 @@
+{
+	"$schema": "https://json.schemastore.org/package",
+	"name": "@sepruko/github-health-files",
+	"version": "0.1.0",
+	"description": "Health files for sepruko on GitHub.",
+	"keywords": [
+		"health-files",
+		"github",
+		"readme",
+		"sepruko"
+	],
+	"homepage": "https://github.com/sepruko",
+	"license": "CC0-1.0",
+	"author": "Nat Sepruko <me@sepruko.dev> (https://sepruko.dev/)",
+	"funding": [
+		"https://github.com/sponsors/sepruko",
+		"https://ko-fi.com/sepruko"
+	],
+	"exports": {
+		"./package.json": "./package.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sepruko/.github.git"
+	},
+	"scripts": {
+		"check": "biome check . && prettier -c . && cspell lint -u --words-only .",
+		"check:fix": "biome check --write . && prettier -w .",
+		"check:fix:all": "biome check --write --unsafe . && prettier -w .",
+		"format": "biome format --write . && prettier -w ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "~1.9.4",
+		"@sepruko/config": "~0.5.3",
+		"cspell": "^8.17.1",
+		"prettier": "^3.4.2"
+	},
+	"engines": {
+		"deno": ">=2.1.4",
+		"node": ">=22.12.0"
+	},
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"onFail": "error"
+		},
+		"packageManager": {
+			"name": "pnpm",
+			"onFail": "error"
+		}
+	},
+	"private": true,
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"@biomejs/biome"
+		]
+	}
+}
