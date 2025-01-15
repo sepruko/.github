@@ -1,0 +1,11 @@
+{
+	"$schema": "node_modules/@biomejs/biome/configuration_schema.json",
+	"extends": [
+		"@sepruko/config/biome/base",
+		"@sepruko/config/biome/css",
+		"@sepruko/config/biome/git",
+		"@sepruko/config/biome/gql",
+		"@sepruko/config/biome/js",
+		"@sepruko/config/biome/json"
+	]
+}
