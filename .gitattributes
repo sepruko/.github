@@ -1,0 +1,24 @@
+*							eol=lf
+*.txt						binary
+
+# markup
+*.md						text
+*.yaml						text
+*.yml						text
+LICENSE						text
+
+# source
+*.bat						text	eol=crlf
+*.cmd						text	eol=crlf
+*.json						text
+*.ps1						text	eol=crlf	working-tree-encoding=utf-16
+
+# tooling
+*.*attributes				text
+*.*ignore					text
+*.*rc						text
+dict/**.txt					text	linguist-language=ignore
+.vscode/**.json				linguist-language=jsonc
+cspell.config.json			linguist-language=jsonc
+package.json				text	-diff
+pnpm-lock*.yaml				text	-diff
