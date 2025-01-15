@@ -1,0 +1,131 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "check:biome",
+			"hide": true,
+			"type": "shell",
+			"command": "biome check --verbose .",
+			"presentation": {
+				"reveal": "silent",
+				"showReuseMessage": false,
+				"clear": true
+			}
+		},
+		{
+			"label": "check:biome:fix",
+			"hide": true,
+			"type": "shell",
+			"command": "biome check --write --verbose .",
+			"presentation": {
+				"reveal": "silent",
+				"showReuseMessage": false,
+				"clear": true
+			}
+		},
+		{
+			"label": "check:cspell",
+			"hide": true,
+			"type": "shell",
+			"command": "cspell lint -u --words-only .",
+			"presentation": {
+				"reveal": "silent",
+				"showReuseMessage": false,
+				"clear": true
+			}
+		},
+		{
+			"label": "check:prettier",
+			"hide": true,
+			"type": "shell",
+			"command": "prettier -c .",
+			"presentation": {
+				"reveal": "silent",
+				"showReuseMessage": false,
+				"clear": true
+			}
+		},
+		{
+			"label": "check:prettier:fix",
+			"hide": true,
+			"type": "shell",
+			"command": "prettier -w .",
+			"presentation": {
+				"reveal": "silent",
+				"showReuseMessage": false,
+				"clear": true
+			}
+		},
+		{
+			"label": "check",
+			"detail": "Inspect logical compliance in source and markup files",
+			"icon": {
+				"color": "terminal.ansiWhite",
+				"id": "search-fuzzy"
+			},
+			"dependsOn": [
+				"check:biome",
+				"check:cspell",
+				"check:prettier"
+			]
+		},
+		{
+			"label": "check:fix",
+			"detail": "Ensure logical compliance in source and markup files",
+			"icon": {
+				"color": "terminal.ansiGreen",
+				"id": "search-fuzzy"
+			},
+			"dependsOn": [
+				"check:biome:fix",
+				"check:prettier:fix"
+			]
+		},
+		{
+			"label": "format:biome",
+			"hide": true,
+			"type": "shell",
+			"command": "biome format --verbose --write .",
+			"presentation": {
+				"reveal": "silent",
+				"showReuseMessage": false,
+				"clear": true
+			}
+		},
+		{
+			"label": "format:prettier",
+			"hide": true,
+			"type": "shell",
+			"command": "prettier -w .",
+			"presentation": {
+				"reveal": "silent",
+				"showReuseMessage": false,
+				"clear": true
+			}
+		},
+		{
+			"label": "format",
+			"detail": "Ensure format compliance in source and markup files",
+			"icon": {
+				"color": "terminal.ansiYellow",
+				"id": "sparkle-filled"
+			},
+			"dependsOn": [
+				"format:biome",
+				"format:prettier"
+			]
+		}
+	],
+	"options": {
+		"env": {
+			"PATH": "node_modules/.bin:${env:PATH}"
+		}
+	},
+	"windows": {
+		"options": {
+			"env": {
+				"PATH": "${env:PATH};node_modules\\.bin"
+			}
+		}
+	}
+}
