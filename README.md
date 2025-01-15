@@ -2,7 +2,7 @@
 
 Default health files for **[@sepruko]** on [GitHub].
 
-> [!INFO]\
+> [!NOTE]\
 > Check out [the GitHub documentation][github-docs-community-health] for more
 > information about this repository's purpose.
 
