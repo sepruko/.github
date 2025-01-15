@@ -8,7 +8,7 @@ Default health files for **[@sepruko]** on [GitHub].
 
 ## List of Provided Files
 
-N/A
+[`FUNDING.yml`](/.github/FUNDING.yml)
 
 ---
 

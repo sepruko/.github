@@ -1,5 +1,6 @@
 # services
 JSR						jsr
+KO_FI		Ko_fi		ko_fi
 
 # standards
 ANSI					ansi
